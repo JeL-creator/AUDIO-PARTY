@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DJ AUDIO PARTY</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: linear-gradient(to right, #4b6cb7, #182848);
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo img {
+      height: 50px;
+      width: 50px;
+    }
+
+    .logo h1 {
+      font-size: 1.5em;
+      margin: 0;
+      letter-spacing: 1px;
+    }
+
+    .button {
+      background-color: white;
+      color: #182848;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #f0f0f0;
+    }
+
+    main {
+      padding-top: 100px;
+    }
+
+    h2 {
+      text-align: center;
+      margin: 40px 0 20px;
+    }
+
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      justify-content: center;
+      padding: 0 20px;
+    }
+
+    .box {
+      flex: 1 1 150px;
+      padding: 20px;
+      text-align: center;
+      font-weight: bold;
+      border: 2px solid black;
+      cursor: pointer;
+      color: black;
+      border-radius: 8px;
+      user-select: none;
+      position: relative;
+    }
+
+    .c1  { background-color: #e74c3c; }
+    .c2  { background-color: #2ecc71; }
+    .c3  { background-color: #3498db; }
+    .c4  { background-color: #7FFF00; }
+    .c5  { background-color: #6495ED; }
+    .c6  { background-color: #FFEBCD; }
+    .c7  { background-color: #F0FFFF; }
+    .c8  { background-color: #FAEBD7; }
+    .c9  { background-color: #DC143C; }
+    .c10 { background-color: #00FFFF; }
+    .c11 { background-color: #BDB76B; }
+    .c12 { background-color: #FFD700; }
+
+    .playing {
+      box-shadow: 0 0 20px #000;
+    }
+
+    .playing-indicator {
+      font-style: italic;
+      font-size: 0.9em;
+      color: #333;
+      margin-top: 10px;
+      animation: pulse 1s infinite;
+    }
+
+    @keyframes pulse {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+    }
+
+    .controls {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .volume-slider {
+      width: 400px;
+    }
+
+    .progress-container {
+      width: 100%;
+      height: 6px;
+      background-color: #ccc;
+      border-radius: 3px;
+      margin-top: 10px;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      height: 100%;
+      width: 0%;
+      background-color: #182848;
+      transition: width 0.2s ease;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .button {
+        width: 100%;
+        margin-top: 5px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Logo">
+      <h1>DJ Audio Party</h1>
+    </div>    
+    <a href="tiktok.html" class="button">TikTok</a>
+    <a href="win.html" class="button">Winner Music</a>    
+    <a href="fx.html" class="button">Sound FX</a>
+    <a href="ins.html" class="button">Instrumental</a>
+    <a href="game.html" class="button">Game FX</a>
+    <a href="drop.html" class="button">Music Drop</a>
+    <a href="birth.html" class="button">Birthday Music</a>
+    <a href="pageant.html" class="button">Pageant Music</a>
+    <a href="pray.html" class="button">Prayer Music</a>
+    <a href="drum.html" class="button">Drum</a>
+    <a href="videos/The Philippine National Anthem with lyrics (HD)(360P).mp4" class="button" target="_blank">The Philippine National Anthem</a>    
+  </header>
+
+<h2>Welcome to Award/Side  Music</h2>
+
+  <div class="flex-container">
+    <div class="box c1"  data-audio="WINNER/AWARD SUSPENCE.wav"  data-key="1">AWARD SUSPENCE(1)</div>
+    <div class="box c2"  data-audio="WINNER/Drum roll susPence.wav"  data-key="2">Drum roll susPence(2)</div>
+    <div class="box c3"  data-audio="WINNER/KILL TIME1.wav"  data-key="3">KILL TIME - KEEP DANCING(3)</div>
+    <div class="box c4"  data-audio="WINNER/KILL TIME.wav"  data-key="4">KILL TIME(4)</div>
+    <div class="box c5"  data-audio="WINNER/Pass Time 1.wav"  data-key="5">KILL TIME(5)</div>
+    <div class="box c6"  data-audio="WINNER/Pass Time 2.wav"  data-key="6">KILL TIME(6)</div>
+    <div class="box c13"  data-audio="WINNER/KILL TIME3.mp3"  data-key="+">KILL TIME(+)</div>
+    <div class="box c7"  data-audio="WINNER/Suspense Diclaration.wav"  data-key="7">Suspense Diclaration(7)</div>
+    <div class="box c8"  data-audio="WINNER/WINNER1.wav"  data-key="8">WINNER(8)</div>
+    <div class="box c9"  data-audio="WINNER/BRING THE BEAT.mp3"  data-key="9">BRING THE BEAT(9)</div>
+    <div class="box c10" data-audio="WINNER/Kool-The-Gang-Celebration.mp3" data-key="0">Kool-The-Gang-Celebration(0)</div>
+    <div class="box c11" data-audio="WINNER/GUITAR1.wav" data-key="-">GUITAR1(-)</div>
+    <div class="box c12" data-audio="WINNER/RAMPA.mp3" data-key="=">RAMPA(=)</div>
+    <div class="box c1" data-audio="WINNER/Whine Up.mp3" data-key="Q">Whine Up(Q)</div>
+    <div class="box c12" data-audio="SIDE/AMAKABOGERA.mp3" data-key="W">AMAKABOGERA(W)</div>
+    <div class="box c2" data-audio="SIDE/DANZA KUDURO.mp3" data-key="E">DANZA KUDURO(E)</div>
+    <div class="box c11" data-audio="SIDE/Samba-do-Brasil.mp3" data-key="R">Samba-do-Brasil(R)</div>
+    <div class="box c3" data-audio="SIDE/EL ANILLO.mp3" data-key="T">EL ANILLO(T)</div>
+    <div class="box c10" data-audio="SIDE/Vice-Ganda-Rampa.mp3" data-key="Y">Vice-Ganda-Rampa(Y)</div>
+    <div class="box c4" data-audio="SIDE/HALIKA LIKA.mp3" data-key="U">HALIKA LIKA(U)</div>
+    <div class="box c9" data-audio="SIDE/SHUT UP AND DANCE.mp3" data-key="I">SHUT UP AND DANCE(I)</div>
+    <div class="box c5" data-audio="SIDE/Kilometro.mp3" data-key="O">Kilometro(O)</div>
+    <div class="box c8" data-audio="SIDE/Tsada Mahigugma.mp3" data-key="P">Tsada Mahigugma(P)</div>
+    </div>
+
+
+
+<div class="controls">
+    <label for="volume">Volume:</label>
+    <input type="range" id="volume" class="volume-slider" min="0" max="1" step="0.01" value="1">
+  </div>
+
+  <script>
+    let currentAudio = null;
+    let currentBox = null;
+    const volumeSlider = document.getElementById('volume');
+
+    function playPauseBox() {
+      const box = this;
+      const fileName = box.dataset.audio;
+      if (!fileName) return;
+
+      if (currentBox === box) {
+        if (currentAudio.paused) {
+          currentAudio.play();
+          box.classList.add('playing');
+          showPlayingIndicator(box);
+        } else {
+          currentAudio.pause();
+          box.classList.remove('playing');
+          removePlayingIndicator(box);
+          removeProgressBar(box);
+        }
+        return;
+      }
+
+      if (currentAudio) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+        currentBox.classList.remove('playing');
+        removePlayingIndicator(currentBox);
+        removeProgressBar(currentBox);
+      }
+
+      currentAudio = new Audio(`sounds/${fileName}`);
+      currentAudio.loop = false;
+      currentAudio.volume = volumeSlider.value;
+      currentAudio.play();
+
+      currentBox = box;
+      box.classList.add('playing');
+      showPlayingIndicator(box);
+      showProgressBar(box);
+
+      currentAudio.addEventListener('timeupdate', updateProgressBar);
+      currentAudio.addEventListener('ended', () => {
+        box.classList.remove('playing');
+        removePlayingIndicator(box);
+        removeProgressBar(box);
+      });
+    }
+
+    function showPlayingIndicator(box) {
+      let indicator = box.querySelector('.playing-indicator');
+      if (!indicator) {
+        indicator = document.createElement('div');
+        indicator.className = 'playing-indicator';
+        indicator.textContent = '🎵 Playing...';
+        box.appendChild(indicator);
+      }
+    }
+
+    function removePlayingIndicator(box) {
+      const indicator = box.querySelector('.playing-indicator');
+      if (indicator) {
+        box.removeChild(indicator);
+      }
+    }
+
+    function showProgressBar(box) {
+      let container = box.querySelector('.progress-container');
+      if (!container) {
+        container = document.createElement('div');
+        container.className = 'progress-container';
+
+        const bar = document.createElement('div');
+        bar.className = 'progress-bar';
+        container.appendChild(bar);
+
+        box.appendChild(container);
+      }
+    }
+
+    function updateProgressBar() {
+      if (!currentAudio || !currentBox) return;
+      const bar = currentBox.querySelector('.progress-bar');
+      if (bar && currentAudio.duration) {
+        const percent = (currentAudio.currentTime / currentAudio.duration) * 100;
+        bar.style.width = `${percent}%`;
+      }
+    }
+
+    function removeProgressBar(box) {
+      const container = box.querySelector('.progress-container');
+      if (container) {
+        box.removeChild(container);
+      }
+    }
+
+    document.querySelectorAll('.box').forEach(box =>
+      box.addEventListener('click', playPauseBox)
+    );
+
+    window.addEventListener('keydown', e => {
+      if (e.altKey || e.ctrlKey || e.metaKey || e.repeat) return;
+      const box = document.querySelector(`.box[data-key="${e.key}"]`);
+      if (!box) return;
+      e.preventDefault();
+      box.click();
+    });
+
+    volumeSlider.addEventListener('input', e => {
+      if (currentAudio) currentAudio.volume = e.target.value;
+    });
+  </script>
+
+</body>
+</html>

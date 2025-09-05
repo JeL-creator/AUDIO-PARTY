@@ -1,0 +1,347 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DJ AUDIO PARTY</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: linear-gradient(to right, #4b6cb7, #182848);
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo img {
+      height: 50px;
+      width: 50px;
+    }
+
+    .logo h1 {
+      font-size: 1.5em;
+      margin: 0;
+      letter-spacing: 1px;
+    }
+
+    .button {
+      background-color: white;
+      color: #182848;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #f0f0f0;
+    }
+
+    main {
+      padding-top: 100px;
+    }
+
+    h2 {
+      text-align: center;
+      margin: 40px 0 20px;
+    }
+
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      justify-content: center;
+      padding: 0 20px;
+    }
+
+    .box {
+      flex: 1 1 150px;
+      padding: 20px;
+      text-align: center;
+      font-weight: bold;
+      border: 2px solid black;
+      cursor: pointer;
+      color: black;
+      border-radius: 8px;
+      user-select: none;
+      position: relative;
+    }
+
+    .c1  { background-color: #e74c3c; }
+    .c2  { background-color: #2ecc71; }
+    .c3  { background-color: #3498db; }
+    .c4  { background-color: #7FFF00; }
+    .c5  { background-color: #6495ED; }
+    .c6  { background-color: #FFEBCD; }
+    .c7  { background-color: #F0FFFF; }
+    .c8  { background-color: #FAEBD7; }
+    .c9  { background-color: #DC143C; }
+    .c10 { background-color: #00FFFF; }
+    .c11 { background-color: #BDB76B; }
+    .c12 { background-color: #FFD700; }
+    .c13  { background-color: #FFFF00; }
+    .c14  { background-color: #00FF00; }
+    .c15  { background-color: #FF00FF; }
+    .c16  { background-color: #FFC0CB; }
+    .c17  { background-color: #00FFFF; }
+    .c18  { background-color: #C0C0C0; }
+    .c19  { background-color: #FFA500; }
+    .c20 { background-color: #7FFFD4; }
+    .c21 { background-color: #98AFC7; }
+    .c22 { background-color: #728FCE; }
+    .c23 { background-color: #1569C7; }
+    .c24 { background-color: #14A3C7; }
+    .c25 { background-color: #3BB9FF; }
+    .c26 { background-color: #E0FFFF; }
+    .c27 { background-color: #01F9C6; }
+    .c28 { background-color: #43BFC7; }
+    .c29 { background-color: #00A36C; }
+    .c30 { background-color: #22CE83; }
+    .c31 { background-color: #08A04B; }
+
+    .playing {
+      box-shadow: 0 0 20px #000;
+    }
+
+    .playing-indicator {
+      font-style: italic;
+      font-size: 0.9em;
+      color: #333;
+      margin-top: 10px;
+      animation: pulse 1s infinite;
+    }
+
+    @keyframes pulse {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+    }
+
+    .controls {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .volume-slider {
+      width: 400px;
+    }
+
+    .progress-container {
+      width: 100%;
+      height: 6px;
+      background-color: #ccc;
+      border-radius: 3px;
+      margin-top: 10px;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      height: 100%;
+      width: 0%;
+      background-color: #182848;
+      transition: width 0.2s ease;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .button {
+        width: 100%;
+        margin-top: 5px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Logo">
+      <h1>DJ Audio Party</h1>
+    </div>    
+    <a href="tiktok.html" class="button">TikTok</a>
+    <a href="win.html" class="button">Winner Music</a>    
+    <a href="fx.html" class="button">Sound FX</a>
+    <a href="ins.html" class="button">Instrumental</a>
+    <a href="game.html" class="button">Game FX</a>
+    <a href="drop.html" class="button">Music Drop</a>
+    <a href="birth.html" class="button">Birthday Music</a>
+    <a href="pageant.html" class="button">Pageant Music</a>
+    <a href="pray.html" class="button">Prayer Music</a>
+    <a href="drum.html" class="button">Drum</a>
+    <a href="videos/The Philippine National Anthem with lyrics (HD)(360P).mp4" class="button" target="_blank">The Philippine National Anthem</a>    
+  </header>
+
+  <h2>Welcome to Instrumental Music</h2>
+
+  <div class="flex-container">
+    <div class="box c1"  data-audio="instrumental/A Sky Full Of Stars.mp3"  data-key="1">A Sky Full Of Stars(1)</div>
+    <div class="box c2"  data-audio="instrumental/Blank Space.mp3"  data-key="2">Blank Space(2)</div>
+    <div class="box c3"  data-audio="instrumental/Chandelier.mp3"  data-key="3">Chandelier(3)</div>
+    <div class="box c4"  data-audio="instrumental/Counting Stars.mp3"  data-key="4">Counting Stars(4)</div>
+    <div class="box c5"  data-audio="instrumental/Disney's Frozen Let It.mp3"  data-key="5">Disney's Frozen Let It(5)</div>
+    <div class="box c6"  data-audio="instrumental/Ed Sheeran - Photograph.mp3"  data-key="6">Ed Sheeran - Photograph(6)</div>
+    <div class="box c7"  data-audio="instrumental/Ellie Goulding - Love Me Like You Do.mp3"  data-key="7">Ellie Goulding - Love Me Like You Do(7)</div>
+    <div class="box c8"  data-audio="instrumental/Flashlight - Jessie J.mp3"  data-key="8">Flashlight - Jessie J(8)</div>
+    <div class="box c9"  data-audio="instrumental/Here I am to Worship.mp3"  data-key="9">Here I am to Worship(9)</div>
+    <div class="box c10" data-audio="instrumental/In Christ Alone.mp3" data-key="0">In Christ Alone(0)</div>
+    <div class="box c11" data-audio="instrumental/Just Give Me a Reason.mp3" data-key="-">Just Give Me a Reason(-)</div>
+    <div class="box c12" data-audio="instrumental/Just the Way You Are(violin).mp3" data-key="=">Just the Way You Are(violin)(=)</div>
+    <div class="box c1" data-audio="instrumental/Just the Way You Are.mp3" data-key="Q">Just the Way You Are(Q)</div>
+    <div class="box c2" data-audio="instrumental/Lady Gaga - Telephone.mp3" data-key="W">Lady Gaga - Telephone(W)</div>
+    <div class="box c3" data-audio="instrumental/Narnia Prince Caspian Ending Song.mp3" data-key="E">Narnia Prince Caspian Ending Song(E)</div>
+    <div class="box c4" data-audio="instrumental/Rihanna - Where Have You Been.mp3" data-key="R">Rihanna - Where Have You Been(R)</div>
+    <div class="box c5" data-audio="instrumental/River Flows in You - Yiruma- Wedding Dress.mp3" data-key="T">River Flows in You - Yiruma- Wedding Dress(T)</div>
+    <div class="box c6" data-audio="instrumental/See You Again.mp3" data-key="Y">See You Again(Y)</div>
+    <div class="box c12" data-audio="instrumental/Sugar.mp3" data-key="U">Sugar(U)</div>
+    <div class="box c11" data-audio="instrumental/Taylor Swift - Shake it Off.mp3" data-key="I">Taylor Swift - Shake it Off(I)</div>
+    <div class="box c10" data-audio="instrumental/The Scientist.mp3" data-key="O">The Scientist(O)</div>
+    <div class="box c9" data-audio="instrumental/Titanium.mp3" data-key="P">Titanium(P)</div>
+    <div class="box c8" data-audio="instrumental/Uptown Funk.mp3" data-key="[">Uptown Funk([)</div>
+    <div class="box c7" data-audio="instrumental/When I Was Your Man.mp3" data-key="]">When I Was Your Man(])</div>
+    <div class="box c2" data-audio="instrumental/Yiruma, (---) - Kiss The Rain.mp3" data-key="A">Yiruma - Kiss The Rain(A)</div>
+  </div>
+
+  <div class="controls">
+    <label for="volume">Volume:</label>
+    <input type="range" id="volume" class="volume-slider" min="0" max="1" step="0.01" value="1">
+  </div>
+
+  <script>
+    let currentAudio = null;
+    let currentBox = null;
+    const volumeSlider = document.getElementById('volume');
+
+    function playPauseBox() {
+      const box = this;
+      const fileName = box.dataset.audio;
+      if (!fileName) return;
+
+      if (currentBox === box) {
+        if (currentAudio.paused) {
+          currentAudio.play();
+          box.classList.add('playing');
+          showPlayingIndicator(box);
+        } else {
+          currentAudio.pause();
+          box.classList.remove('playing');
+          removePlayingIndicator(box);
+          removeProgressBar(box);
+        }
+        return;
+      }
+
+      if (currentAudio) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+        currentBox.classList.remove('playing');
+        removePlayingIndicator(currentBox);
+        removeProgressBar(currentBox);
+      }
+
+      currentAudio = new Audio(`sounds/${fileName}`);
+      currentAudio.loop = false;
+      currentAudio.volume = volumeSlider.value;
+      currentAudio.play();
+
+      currentBox = box;
+      box.classList.add('playing');
+      showPlayingIndicator(box);
+      showProgressBar(box);
+
+      currentAudio.addEventListener('timeupdate', updateProgressBar);
+      currentAudio.addEventListener('ended', () => {
+        box.classList.remove('playing');
+        removePlayingIndicator(box);
+        removeProgressBar(box);
+      });
+    }
+
+    function showPlayingIndicator(box) {
+      let indicator = box.querySelector('.playing-indicator');
+      if (!indicator) {
+        indicator = document.createElement('div');
+        indicator.className = 'playing-indicator';
+        indicator.textContent = '🎵 Playing...';
+        box.appendChild(indicator);
+      }
+    }
+
+    function removePlayingIndicator(box) {
+      const indicator = box.querySelector('.playing-indicator');
+      if (indicator) {
+        box.removeChild(indicator);
+      }
+    }
+
+    function showProgressBar(box) {
+      let container = box.querySelector('.progress-container');
+      if (!container) {
+        container = document.createElement('div');
+        container.className = 'progress-container';
+
+        const bar = document.createElement('div');
+        bar.className = 'progress-bar';
+        container.appendChild(bar);
+
+        box.appendChild(container);
+      }
+    }
+
+    function updateProgressBar() {
+      if (!currentAudio || !currentBox) return;
+      const bar = currentBox.querySelector('.progress-bar');
+      if (bar && currentAudio.duration) {
+        const percent = (currentAudio.currentTime / currentAudio.duration) * 100;
+        bar.style.width = `${percent}%`;
+      }
+    }
+
+    function removeProgressBar(box) {
+      const container = box.querySelector('.progress-container');
+      if (container) {
+        box.removeChild(container);
+      }
+    }
+
+    document.querySelectorAll('.box').forEach(box =>
+      box.addEventListener('click', playPauseBox)
+    );
+
+    window.addEventListener('keydown', e => {
+      if (e.altKey || e.ctrlKey || e.metaKey || e.repeat) return;
+      const box = document.querySelector(`.box[data-key="${e.key}"]`);
+      if (!box) return;
+      e.preventDefault();
+      box.click();
+    });
+
+    volumeSlider.addEventListener('input', e => {
+      if (currentAudio) currentAudio.volume = e.target.value;
+    });
+  </script>
+
+</body>
+</html>

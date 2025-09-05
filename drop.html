@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DJ AUDIO PARTY</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    /* Sticky Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: linear-gradient(to right, #4b6cb7, #182848);
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo img {
+      height: 50px;
+      width: 50px;
+    }
+
+    .logo h1 {
+      font-size: 1.5em;
+      margin: 0;
+      letter-spacing: 1px;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.5em;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .button {
+      background-color: white;
+      color: #182848;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #f0f0f0;
+    }
+
+    main {
+      padding-top: 100px; /* Adjust based on header height */
+    }
+
+
+    h2 {
+      text-align: center;
+      margin: 40px 0 20px;
+    }
+
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      justify-content: center;
+      padding: 0 20px;
+    }
+
+    .box {
+      flex: 1 1 150px;
+      padding: 20px;
+      text-align: center;
+      font-weight: bold;
+      border: 2px solid black;
+      cursor: pointer;
+      color: black;
+      border-radius: 8px;
+      user-select: none;
+    }
+
+    .c1  { background-color: #00BFFF; }
+    .c2  { background-color: #228B22; }
+    .c3  { background-color: #FFD700; }
+    .c4  { background-color: #008000; }
+    .c5  { background-color: #00FFFF; }
+    .c6  { background-color: #DEB887; }
+    .c7  { background-color: #5F9EA0; }
+    .c8  { background-color: #FAEBD7; }
+    .c9  { background-color: #DC143C; }
+    .c10 { background-color: #6495ED; }
+    .c11 { background-color: #BDB76B; }
+    .c12 { background-color: #32CD32; }
+
+    .playing {
+      box-shadow: 0 0 20px #000;
+    }
+
+    .controls {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .volume-slider {
+      width: 400px;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Logo">
+      <h1>DJ Audio Party</h1>
+    </div>	
+    <a href="tiktok.html" class="button">TikTok</a>
+    <a href="win.html" class="button">Winner Music</a>	
+    <a href="fx.html" class="button">Sound FX</a>
+    <a href="ins.html" class="button">Instrumental</a>
+    <a href="game.html" class="button">Game FX</a>
+    <a href="drop.html" class="button">Music Drop</a>
+    <a href="drop2.html" class="button">Music Drop #2</a>
+    <a href="birth.html" class="button">Birthday Music</a>
+    <a href="pageant.html" class="button">Pageant Music</a>
+    <a href="pray.html" class="button">Prayer Music</a>
+    <a href="drum.html" class="button">Drum</a>
+    <a href="videos/The Philippine National Anthem with lyrics (HD)(360P).mp4" class="button" target="_blank">The Philippine National Anthem</a>
+
+	
+  </header>
+
+  <h2>Welcome to Drop Music #1</h2>
+
+  <div class="flex-container">
+    <div class="box c1"  data-audio="DROPS/Beat 1.wav"  data-key="1">Beat (1)</div>
+    <div class="box c2"  data-audio="DROPS/Beat 2.wav"  data-key="2">Beat (2)</div>
+    <div class="box c3"  data-audio="DROPS/Beat 3.wav"  data-key="3">Beat (3)</div>
+    <div class="box c4"  data-audio="DROPS/Beat 4.wav"  data-key="4">Beat (4)</div>
+    <div class="box c5"  data-audio="DROPS/Beat 5.wav"  data-key="5">Beat (5)</div>
+    <div class="box c6"  data-audio="DROPS/DROP THE BASS.wav"  data-key="6">Beat (6)</div>
+    <div class="box c8"  data-audio="DROPS/DROPS2.wav"  data-key="7">Beat (7)</div>
+    <div class="box c7"  data-audio="DROPS/DROPS8.wav"  data-key="8">Beat (8)</div>
+    <div class="box c9"  data-audio="DROPS/DROPS4.wav"  data-key="9">Beat (9)</div>
+    <div class="box c10" data-audio="DROPS/DROPS5.wav" data-key="0">Beat (0)</div>
+    <div class="box c11" data-audio="DROPS/DROPS6.wav" data-key="-">Beat (-)</div>
+    <div class="box c12" data-audio="DROPS/DROPS7.wav" data-key="=">Beat (=)</div>
+    <div class="box c1" data-audio="DROPS/Aero Chord.mp3" data-key="Q">Aero Chord(Q)</div>
+    <div class="box c2" data-audio="DROPS/Come on Crazy.wav" data-key="W">Come on Crazy(W)</div>
+    <div class="box c3" data-audio="DROPS/Come on.wav" data-key="E">Come on(E)</div>
+    <div class="box c4" data-audio="DROPS/Dont You Remember.wav" data-key="R">Dont You Remember(R)</div>
+    <div class="box c5" data-audio="DROPS/Everything You See.mp3" data-key="T">Everything You See(T)</div>
+    <div class="box c6" data-audio="DROPS/Gummy Bear.wav" data-key="Y">Gummy Bear(Y)</div>
+    <div class="box c12" data-audio="DROPS/I Know.wav" data-key="U">I Know(U)</div>
+    <div class="box c11" data-audio="DROPS/I LIKE TO MOVE IT.mp3" data-key="I">I LIKE TO MOVE IT(I)</div>
+    <div class="box c10" data-audio="DROPS/NEW THANG.mp3" data-key="O">NEW THANG(O)</div>
+    <div class="box c9" data-audio="DROPS/Pump Like That.wav" data-key="P">Pump Like That(P)</div>
+    <div class="box c8" data-audio="DROPS/REVOLUTION.mp3" data-key="[">REVOLUTION([)</div>
+    <div class="box c7" data-audio="DROPS/Trumpet Blows.wav" data-key="]">Trumpet Blows(])</div>
+    <div class="box c2" data-audio="DROPS/Uno dos Tres.wav" data-key="A">Uno dos Tres(A)</div>
+    <div class="box c4" data-audio="DROPS/24 K.wav" data-key="S">24 K(S)</div>
+    <div class="box c6" data-audio="DROPS/2020 YEAR.wav" data-key="D">2020 YEAR(D)</div>
+    <div class="box c8" data-audio="DROPS/AFRO BRAVO.wav" data-key="F">AFRO BRAVO(F)</div>
+    <div class="box c10" data-audio="DROPS/AGAIN BEAT.wav" data-key="G">AGAIN BEAT(G)</div>
+    <div class="box c12" data-audio="DROPS/ALL X-mas Beat.wav" data-key="H">ALL X-mas Beat(H)</div>
+    <div class="box c1" data-audio="DROPS/AT NGAYON.wav" data-key="J">AT NGAYON(J)</div>
+    <div class="box c3" data-audio="DROPS/Baka Sakali.wav" data-key="K">Baka Sakali(K)</div>
+    <div class="box c5" data-audio="DROPS/Bam.wav" data-key="L">Bam(L)</div>
+    <div class="box c7" data-audio="DROPS/BARBIE.wav" data-key=";">BARBIE(;)</div>
+    <div class="box c9" data-audio="DROPS/BASS.wav" data-key="Z">BASS(Z)</div>
+    <div class="box c11" data-audio="DROPS/BEAUTIFUL GIRLS.wav" data-key="X">BEAUTIFUL GIRLS(X)</div>
+    <div class="box c12" data-audio="DROPS/BIRD X-mas Beat.wav" data-key="C">BIRD X-mas Beat(C)</div>
+    <div class="box c11" data-audio="DROPS/BOOM.wav" data-key="V">BOOM(V)</div>
+    <div class="box c10" data-audio="DROPS/Booty Wurk.wav" data-key="B">Booty Wurk(B)</div>
+    <div class="box c9" data-audio="DROPS/BOYS LIKE ME.wav" data-key="N">BOYS LIKE ME(N)</div>
+    <div class="box c8" data-audio="DROPS/BUDOTS1.wav" data-key="M">BUDOTS(M)</div>
+    <div class="box c7" data-audio="DROPS/Cake.wav" data-key="q">Cake(q)</div>
+    <div class="box c6" data-audio="DROPS/CALM BIRD cha.wav" data-key="w">CALM BIRD cha(w)</div>
+    <div class="box c5" data-audio="DROPS/car.wav" data-key="e">Car(e)</div>
+    <div class="box c4" data-audio="DROPS/cat.wav" data-key="r">Cat(r)</div>
+    <div class="box c3" data-audio="DROPS/COL.wav" data-key="t">COL(t)</div>
+    <div class="box c2" data-audio="DROPS/DRIFT.wav" data-key="y">DRIFT(y)</div>
+    <div class="box c1" data-audio="DROPS/EVERYTIME.wav" data-key="u">EVERYTIME(u)</div>
+    <div class="box c12" data-audio="DROPS/FACE.wav" data-key="i">FACE(i)</div>
+    <div class="box c10" data-audio="DROPS/FAMILY is love.wav" data-key="o">FAMILY is love(o)</div>
+    <div class="box c8" data-audio="DROPS/FIRE.wav" data-key="p">FIRE(p)</div>
+    <div class="box c6" data-audio="DROPS/FOLLOW ME.wav" data-key="a">FOLLOW ME(a)</div>
+    <div class="box c4" data-audio="DROPS/FOREVER.wav" data-key="s">FOREVER</div>
+    <div class="box c2" data-audio="DROPS/FUT CHA.wav" data-key="d">FUT CHA(d)</div>
+    <div class="box c1" data-audio="DROPS/Get Low.wav" data-key="f">Get Low(f)</div>
+    <div class="box c3" data-audio="DROPS/HANDS UP BEAT.wav" data-key="g">HANDS UP BEAT(g)</div>
+    <div class="box c5" data-audio="DROPS/HELLO UPBEAT.wav" data-key="h">HELLO UPBEAT(h)</div>
+    <div class="box c7" data-audio="DROPS/Hey Dj.wav" data-key="j">Hey Dj(j)</div>
+    <div class="box c9" data-audio="DROPS/I CANT FIGHT .wav" data-key="k">I CANT FIGHT (k)</div>
+    <div class="box c1" data-audio="DROPS/I DON’T CARE.wav" data-key="l">I DON’T CARE(l)</div>
+    <div class="box c12" data-audio="DROPS/I JUST.wav" data-key="z">I JUST(z)</div>
+    <div class="box c2" data-audio="DROPS/I Know.wav" data-key="x">I Know(x)</div>
+    <div class="box c11" data-audio="DROPS/I NEED YOU GIRL.wav" data-key="c">I NEED YOU GIRL(c)</div>
+    <div class="box c3" data-audio="DROPS/I LOVE THE WAY.wav" data-key="v">I LOVE THE WAY(v)</div>
+    <div class="box c10" data-audio="DROPS/IKAW.wav" data-key="b">IKAW(b)</div>
+    <div class="box c4" data-audio="DROPS/ILL BE YOUR LIGHHOUSES.wav" data-key="n">ILL BE YOUR LIGHHOUSES(n)</div>
+    <div class="box c9" data-audio="DROPS/INTRO1cinEMA.wav" data-key="m">INTRO1cinEMA(m)</div>
+  </div>
+
+  <div class="controls">
+    <label for="volume">Volume:</label>
+    <input type="range" id="volume" class="volume-slider" min="0" max="1" step="0.01" value="1">
+  </div>
+
+  <script>
+    let currentAudio = null;
+    let currentBox   = null;
+    const volumeSlider = document.getElementById('volume');
+
+    function playPauseBox() {
+      const box      = this;
+      const fileName = box.dataset.audio;
+      if (!fileName) return;
+
+      // same-box toggle
+      if (currentBox === box) {
+        if (currentAudio.paused) {
+          currentAudio.play();
+          box.classList.add('playing');
+        } else {
+          currentAudio.pause();
+          box.classList.remove('playing');
+        }
+        return;
+      }
+
+      // switching to a new box
+      if (currentAudio) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+        currentBox.classList.remove('playing');
+      }
+
+      currentAudio        = new Audio(`sounds/${fileName}`);
+      currentAudio.loop   = false;
+      currentAudio.volume = volumeSlider.value;
+      currentAudio.play();
+
+      currentBox = box;
+      box.classList.add('playing');
+    }
+    function toggleMenu() {
+      const nav = document.getElementById('navMenu');
+      nav.classList.toggle('show');
+    };
+
+    // attach click handlers
+    document.querySelectorAll('.box').forEach(box =>
+      box.addEventListener('click', playPauseBox)
+    );
+
+    // keyboard shortcuts
+    window.addEventListener('keydown', e => {
+      // ignore modifiers & repeats
+      if (e.altKey || e.ctrlKey || e.metaKey || e.repeat) return;
+
+      const box = document.querySelector(`.box[data-key="${e.key}"]`);
+      if (!box) return;
+
+      e.preventDefault();
+      box.click();
+    });
+
+    // volume control
+    volumeSlider.addEventListener('input', e => {
+      if (currentAudio) currentAudio.volume = e.target.value;
+    });
+
+
+  </script>
+
+</body>
+</html>

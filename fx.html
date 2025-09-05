@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DJ AUDIO PARTY</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    /* Sticky Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: linear-gradient(to right, #4b6cb7, #182848);
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo img {
+      height: 50px;
+      width: 50px;
+    }
+
+    .logo h1 {
+      font-size: 1.5em;
+      margin: 0;
+      letter-spacing: 1px;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.5em;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .button {
+      background-color: white;
+      color: #182848;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #f0f0f0;
+    }
+
+    main {
+      padding-top: 100px; /* Adjust based on header height */
+    }
+
+
+    h2 {
+      text-align: center;
+      margin: 40px 0 20px;
+    }
+
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      justify-content: center;
+      padding: 0 20px;
+    }
+
+    .box {
+      flex: 1 1 150px;
+      padding: 20px;
+      text-align: center;
+      font-weight: bold;
+      border: 2px solid black;
+      cursor: pointer;
+      color: black;
+      border-radius: 8px;
+      user-select: none;
+    }
+
+    .c1  { background-color: #00BFFF; }
+    .c2  { background-color: #228B22; }
+    .c3  { background-color: #FFD700; }
+    .c4  { background-color: #008000; }
+    .c5  { background-color: #00FFFF; }
+    .c6  { background-color: #DEB887; }
+    .c7  { background-color: #5F9EA0; }
+    .c8  { background-color: #FAEBD7; }
+    .c9  { background-color: #DC143C; }
+    .c10 { background-color: #6495ED; }
+    .c11 { background-color: #BDB76B; }
+    .c12 { background-color: #32CD32; }
+
+    .playing {
+      box-shadow: 0 0 20px #000;
+    }
+
+    .controls {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .volume-slider {
+      width: 400px;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+      }
+
+      nav.show {
+        display: flex;
+      }
+
+      .button {
+        width: 100%;
+        margin-top: 5px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Logo">
+      <h1>DJ Audio Party</h1>
+    </div>	
+    <a href="tiktok.html" class="button">TikTok</a>
+    <a href="win.html" class="button">Winner Music</a>	
+    <a href="fx.html" class="button">Sound FX</a>
+    <a href="ins.html" class="button">Instrumental</a>
+    <a href="game.html" class="button">Game FX</a>
+    <a href="drop.html" class="button">Music Drop</a>
+    <a href="birth.html" class="button">Birthday Music</a>
+    <a href="pageant.html" class="button">Pageant Music</a>
+    <a href="pray.html" class="button">Prayer Music</a>
+    <a href="drum.html" class="button">Drum</a>
+    <a href="videos/The Philippine National Anthem with lyrics (HD)(360P).mp4" class="button" target="_blank">The Philippine National Anthem</a>
+
+	
+  </header>
+
+  <h2>Welcome to Sound Effects #1</h2>
+
+  <div class="flex-container">
+    <div class="box c1"  data-audio="EFFECTS/APPLAUSE (FX).mp3"  data-key="1">APPLAUSE (FX)(1)</div>
+    <div class="box c2"  data-audio="EFFECTS/BALL BOUNCING (FX).mp3"  data-key="2">BALL BOUNCING (FX)(2)</div>
+    <div class="box c3"  data-audio="EFFECTS/BOI2.mp3"  data-key="3">BOINK! #2(3)</div>
+    <div class="box c4"  data-audio="EFFECTS/CAMERA (FX).mp3"  data-key="4">CAMERA (FX)(4)</div>
+    <div class="box c5"  data-audio="EFFECTS/CHINESE GONG.mp3"  data-key="5">CHINESE GONG(5)</div>
+    <div class="box c6"  data-audio="EFFECTS/CRICKETS (FX).mp3"  data-key="6">CRICKETS (FX)(6)</div>
+    <div class="box c7"  data-audio="EFFECTS/DARNA (VOICE FX).mp3"  data-key="7">DARNA (VOICE FX)(7)</div>
+    <div class="box c8"  data-audio="EFFECTS/DOOR KNOCKING (FX).mp3"  data-key="8">DOOR KNOCKING (FX)(8)</div>
+    <div class="box c9"  data-audio="EFFECTS/EASY (2X).mp3"  data-key="9">EASY (2X)(9)</div>
+    <div class="box c10" data-audio="EFFECTS/FART (UTOT FX).mp3" data-key="0">FART (UTOT FX)(0)</div>
+    <div class="box c11" data-audio="EFFECTS/FUNNY FX1.mp3" data-key="-">FUNNY FX #1(-)</div>
+    <div class="box c12" data-audio="EFFECTS/FUNNY FX2.mp3" data-key="=">FUNNY FX #2(=)</div>
+    <div class="box c1" data-audio="EFFECTS/GLASS BREAKING 1.mp3" data-key="Q">GLASS BREAKING #1(Q)</div>
+    <div class="box c2" data-audio="EFFECTS/GLASS BREAKING 2.mp3" data-key="W">GLASS BREAKING #2(W)</div>
+    <div class="box c3" data-audio="EFFECTS/HALA KA (VOICE FX).wav" data-key="E">HALA KA (VOICE FX)(E)</div>
+    <div class="box c4" data-audio="EFFECTS/HANAP (VOICE FX).mp3" data-key="R">HANAP (VOICE FX)(R)</div>
+    <div class="box c5" data-audio="EFFECTS/HEAVENLY CHOIR.mp3" data-key="T">HEAVENLY CHOIR(T)</div>
+    <div class="box c6" data-audio="EFFECTS/HORN 1.mp3" data-key="Y">HORN #1(Y)</div>
+    <div class="box c12" data-audio="EFFECTS/HORN 2 (5X).mp3" data-key="U">HORN #2 (5)(U)</div>
+    <div class="box c11" data-audio="EFFECTS/HORN 2.mp3" data-key="I">HORN #2(I)</div>
+    <div class="box c10" data-audio="EFFECTS/HORN 6 (DJ).mp3" data-key="O">HORN #6 (DJ)(O)</div>
+    <div class="box c9" data-audio="EFFECTS/HORN 7 (DJ V.2).mp3" data-key="P">HORN #7 (DJ V.2)(P)</div>
+    <div class="box c8" data-audio="EFFECTS/HORN 8 (PANDESAL).mp3" data-key="[">HORN #8 (PANDESAL)([)</div>
+    <div class="box c7" data-audio="EFFECTS/HORN 9 (X4).mp3" data-key="]">HORN #9 (X4)(])</div>
+    <div class="box c2" data-audio="EFFECTS/JOKE PUNCH LINE.mp3" data-key="A">JOKE PUNCH LINE(A)</div>
+    <div class="box c4" data-audio="EFFECTS/KICK 1 (FX).mp3" data-key="S">KICK #1 (FX)(S)</div>
+    <div class="box c6" data-audio="EFFECTS/KICK 2 (FX).mp3" data-key="D">KICK #2 (FX)(D)</div>
+    <div class="box c8" data-audio="EFFECTS/LAUGH 1 (CARTOON).mp3" data-key="F">LAUGH #1 (CARTOON)(F)</div>
+    <div class="box c10" data-audio="EFFECTS/LAUGH 2 (CARTOON 2X).mp3" data-key="G">LAUGH #2 (CARTOON 2X)(G)</div>
+    <div class="box c12" data-audio="EFFECTS/LAUGH 2 (CARTOON).mp3" data-key="H">LAUGH #2 (CARTOON)(H)</div>
+    <div class="box c1" data-audio="EFFECTS/LAUGH 3 (CHIPMUNK).mp3" data-key="J">LAUGH #3 (CHIPMUNK)(J)</div>
+    <div class="box c3" data-audio="EFFECTS/LAUGH 4 (MONKEY).mp3" data-key="K">LAUGH #4 (MONKEY)(K)</div>
+    <div class="box c5" data-audio="EFFECTS/LAUGH 5 (SMALL MONKEY).mp3" data-key="L">LAUGH #5 (SMALL MONKEY)(L)</div>
+    <div class="box c7" data-audio="EFFECTS/LAUGH 6 (HA AH AH AH).mp3" data-key=";">LAUGH #6 (HA AH AH AH)(;)</div>
+    <div class="box c9" data-audio="EFFECTS/LAUGH 7 (CROWD WITH WEEEY).wav" data-key="Z">LAUGH #7 (CROWD WITH WEEEY)(Z)</div>
+    <div class="box c11" data-audio="EFFECTS/LAUGH 8 (WITH TWOONG).wav" data-key="X">LAUGH #8 (WITH TWOONG)(X)</div>
+    <div class="box c12" data-audio="EFFECTS/LAUGH 14 (BABY).wav" data-key="C">LAUGH #14 (BABY)(C)</div>
+    <div class="box c11" data-audio="EFFECTS/NASAN BA YUNG TUBO (WITH LAUGH FX).mp3" data-key="V">NASAN BA YUNG TUBO (WITH LAUGH FX)(V)</div>
+    <div class="box c10" data-audio="EFFECTS/OH YEAH (VOICE FX).mp3" data-key="B">OH YEAH! (VOICE FX)(B)</div>
+    <div class="box c9" data-audio="EFFECTS/OMG, WOW (VOICE FX).mp3" data-key="N">OMG, WOW! (VOICE FX)(N)</div>
+    <div class="box c8" data-audio="EFFECTS/SAMPLE KICK (22X).mp3" data-key="M">SAMPLE KICK (22X)(M)</div>
+    <div class="box c7" data-audio="EFFECTS/SAMPLE KICK (1X).mp3" data-key="q">SAMPLE KICK (1X)(q)</div>
+    <div class="box c6" data-audio="EFFECTS/SCREAM (DISCO FX).mp3" data-key="w">SCREAM (DISCO FX)(w)</div>
+    <div class="box c5" data-audio="EFFECTS/SHOWEW.mp3" data-key="e">SHOWEW!(e)</div>
+    <div class="box c4" data-audio="EFFECTS/SPOON TAP ON GLASS (FX).mp3" data-key="r">SPOON TAP ON GLASS (FX)(r)</div>
+    <div class="box c3" data-audio="EFFECTS/STOP MUSICS (MOD FX).mp3" data-key="t">STOP MUSICS (MOD FX)(t)</div>
+    <div class="box c2" data-audio="EFFECTS/SUDDEN SUSPENSE.mp3" data-key="y">SUDDEN SUSPENSE(y)</div>
+    <div class="box c1" data-audio="EFFECTS/SUSPENSE 3.mp3" data-key="u">SUSPENSE #3(u)</div>
+    <div class="box c12" data-audio="EFFECTS/SUSPENSE 4 (CLIMAX).mp3" data-key="i">SUSPENSE #4(i)</div>
+    <div class="box c10" data-audio="EFFECTS/SUSPENSE 5 (MAIN FX).mp3" data-key="o">SUSPENSE #5 (MAIN FX)(o)</div>
+    <div class="box c8" data-audio="EFFECTS/WASAK EDITION (WITH LAUGH) (DONNA).wav" data-key="p">WASAK EDITION (WITH LAUGH) (DONNA)(p)</div>
+    <div class="box c6" data-audio="EFFECTS/WEEEY (1X).mp3" data-key="a">WEEEY! (1X)(a)</div>
+    <div class="box c4" data-audio="EFFECTS/WEEEY (2X).mp3" data-key="s">WEEEY! (2X)(s)</div>
+    <div class="box c2" data-audio="EFFECTS/WEH DI NGA (VOICE FX).mp3" data-key="d">WEH DI NGA (VOICE FX)(d)</div>
+    <div class="box c1" data-audio="EFFECTS/WHIP 3 (5X).mp3" data-key="f">WHIP! #3 (5X)(f)</div>
+    <div class="box c3" data-audio="EFFECTS/WHISTLE (WITWIW).mp3" data-key="g">WHISTLE (WITWIW)(g)</div>
+    <div class="box c5" data-audio="EFFECTS/WISTLE BALL.mp3" data-key="h">WISTLE BALL(h)</div>
+    <div class="box c7" data-audio="EFFECTS/YAHOOO 1 (FAST).mp3" data-key="j">YAHOOO! #1 (FAST)(j)</div>
+    <div class="box c9" data-audio="EFFECTS/YEAH BABY (VOICE FX).mp3" data-key="k">YEAH BABY (VOICE FX)(k)</div>
+    <div class="box c1" data-audio="EFFECTS/YEEEEEHU.mp3" data-key="l">YEEEEEHU!(l)</div>
+    <div class="box c12" data-audio="EFFECTS/YEEEEHOW.mp3" data-key="z">YEEEEHOW!(z)</div>
+    <div class="box c2" data-audio="EFFECTS/YEHAAA.mp3" data-key="x">YEHAAA!(x)</div>
+    <div class="box c11" data-audio="EFFECTS/YEHEY (KIDS VOICE FX).mp3" data-key="c">YEHEY! (KIDS VOICE FX)(c)</div>
+    <div class="box c3" data-audio="EFFECTS/YIPEEEY.mp3" data-key="v">YIPEEEY!(v)</div>
+    <div class="box c10" data-audio="EFFECTS/MAKE SOME NOISE.wav" data-key="b">MAKE SOME NOISE(b)</div>
+  </div>
+
+  <div class="controls">
+    <label for="volume">Volume:</label>
+    <input type="range" id="volume" class="volume-slider" min="0" max="1" step="0.01" value="1">
+  </div>
+
+  <script>
+    let currentAudio = null;
+    let currentBox   = null;
+    const volumeSlider = document.getElementById('volume');
+
+    function playPauseBox() {
+      const box      = this;
+      const fileName = box.dataset.audio;
+      if (!fileName) return;
+
+      // same-box toggle
+      if (currentBox === box) {
+        if (currentAudio.paused) {
+          currentAudio.play();
+          box.classList.add('playing');
+        } else {
+          currentAudio.pause();
+          box.classList.remove('playing');
+        }
+        return;
+      }
+
+      // switching to a new box
+      if (currentAudio) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+        currentBox.classList.remove('playing');
+      }
+
+      currentAudio        = new Audio(`sounds/${fileName}`);
+      currentAudio.loop   = false;
+      currentAudio.volume = volumeSlider.value;
+      currentAudio.play();
+
+      currentBox = box;
+      box.classList.add('playing');
+    }
+    function toggleMenu() {
+      const nav = document.getElementById('navMenu');
+      nav.classList.toggle('show');
+    };
+
+    // attach click handlers
+    document.querySelectorAll('.box').forEach(box =>
+      box.addEventListener('click', playPauseBox)
+    );
+
+    // keyboard shortcuts
+    window.addEventListener('keydown', e => {
+      // ignore modifiers & repeats
+      if (e.altKey || e.ctrlKey || e.metaKey || e.repeat) return;
+
+      const box = document.querySelector(`.box[data-key="${e.key}"]`);
+      if (!box) return;
+
+      e.preventDefault();
+      box.click();
+    });
+
+    // volume control
+    volumeSlider.addEventListener('input', e => {
+      if (currentAudio) currentAudio.volume = e.target.value;
+    });
+
+
+  </script>
+
+</body>
+</html>

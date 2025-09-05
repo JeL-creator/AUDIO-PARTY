@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DJ AUDIO PARTY</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    /* Sticky Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: linear-gradient(to right, #4b6cb7, #182848);
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo img {
+      height: 50px;
+      width: 50px;
+    }
+
+    .logo h1 {
+      font-size: 1.5em;
+      margin: 0;
+      letter-spacing: 1px;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.5em;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .button {
+      background-color: white;
+      color: #182848;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #f0f0f0;
+    }
+
+    main {
+      padding-top: 100px; /* Adjust based on header height */
+    }
+
+
+    h2 {
+      text-align: center;
+      margin: 40px 0 20px;
+    }
+
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      justify-content: center;
+      padding: 0 20px;
+    }
+
+    .box {
+      flex: 1 1 150px;
+      padding: 20px;
+      text-align: center;
+      font-weight: bold;
+      border: 2px solid black;
+      cursor: pointer;
+      color: black;
+      border-radius: 8px;
+      user-select: none;
+    }
+
+    .c1  { background-color: #00BFFF; }
+    .c2  { background-color: #228B22; }
+    .c3  { background-color: #FFD700; }
+    .c4  { background-color: #008000; }
+    .c5  { background-color: #00FFFF; }
+    .c6  { background-color: #DEB887; }
+    .c7  { background-color: #5F9EA0; }
+    .c8  { background-color: #FAEBD7; }
+    .c9  { background-color: #DC143C; }
+    .c10 { background-color: #6495ED; }
+    .c11 { background-color: #BDB76B; }
+    .c12 { background-color: #32CD32; }
+
+    .playing {
+      box-shadow: 0 0 20px #000;
+    }
+
+    .controls {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .volume-slider {
+      width: 400px;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+      }
+
+      nav.show {
+        display: flex;
+      }
+
+      .button {
+        width: 100%;
+        margin-top: 5px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Logo">
+      <h1>DJ Audio Party</h1>
+    </div>	
+    <a href="tiktok.html" class="button">TikTok</a>
+    <a href="win.html" class="button">Winner Music</a>	
+    <a href="fx.html" class="button">Sound FX</a>
+    <a href="ins.html" class="button">Instrumental</a>
+    <a href="game.html" class="button">Game FX</a>
+    <a href="drop.html" class="button">Music Drop</a>
+    <a href="birth.html" class="button">Birthday Music</a>
+    <a href="pageant.html" class="button">Pageant Music</a>
+    <a href="pray.html" class="button">Prayer Music</a>
+    <a href="drum.html" class="button">Drum</a>
+    <a href="videos/The Philippine National Anthem with lyrics (HD)(360P).mp4" class="button" target="_blank">The Philippine National Anthem</a>
+
+	
+  </header>
+
+  <h2>Welcome to Game Effects</h2>
+
+  <div class="flex-container">
+    <div class="box c1"  data-audio="GAME/AHHH.mp3"  data-key="1">AHHH (1)</div>
+    <div class="box c2"  data-audio="GAME/BUZZER (CORRECT ANSWER).mp3"  data-key="2">BUZZER (CORRECT ANSWER)(2)</div>
+    <div class="box c3"  data-audio="GAME/BUZZER (WRONG ANSWER).mp3"  data-key="3">BUZZER (WRONG ANSWER)(3)</div>
+    <div class="box c4"  data-audio="GAME/CLOCK (FX) [BACKGROUND].mp3"  data-key="4">CLOCK (FX) [BACKGROUND](4)</div>
+    <div class="box c5"  data-audio="GAME/HEART BEAT.mp3"  data-key="5">HEART BEAT (FX)(5)</div>
+    <div class="box c6"  data-audio="GAME/IDEA.mp3"  data-key="6">IDEA(6)</div>
+    <div class="box c7"  data-audio="GAME/TELEPHONE RING.mp3"  data-key="7">TELEPHONE RING(7)</div>
+    <div class="box c8"  data-audio="GAME/TIMER (BEEP SOUND 1).mp3"  data-key="8">TIMER (BEEP SOUND 1)(8)</div>
+    <div class="box c9"  data-audio="GAME/TIMER (BEEP SOUND 2).mp3"  data-key="9">TIMER (BEEP SOUND 2)(9)</div>
+    <div class="box c10" data-audio="GAME/WOOOOW (AMAZE).mp3" data-key="0">WOOOOW (AMAZE)(0)</div>
+    <div class="box c11" data-audio="GAME/YAHOO 2.mp3" data-key="-">YAHOO 2(-)</div>
+    <div class="box c12" data-audio="GAME/BOINK 1.mp3" data-key="=">BOINK 1(=)</div>
+    <div class="box c1" data-audio="GAME/CHIMES 1.mp3" data-key="Q">CHIMES 1(Q)</div>
+    <div class="box c2" data-audio="GAME/CHIMES 2.mp3" data-key="W">CHIMES 2(W)</div>
+    <div class="box c3" data-audio="GAME/CHIMES 3.mp3" data-key="E">CHIMES 3(E)</div>
+    <div class="box c4" data-audio="GAME/CHIMES 4.mp3" data-key="R">CHIMES 4(R)</div>
+    <div class="box c5" data-audio="GAME/CHIMES 5.mp3" data-key="T">CHIMES 5(T)</div>
+    <div class="box c6" data-audio="GAME/CHIMES 6.mp3" data-key="Y">CHIMES 6(Y)</div>
+    <div class="box c12" data-audio="GAME/CHIMES 7.mp3" data-key="U">CHIMES 7(U)</div>
+    <div class="box c11" data-audio="GAME/CHIWIBOL (AHMM).mp3" data-key="I">CHIWIBOL (AHMM)(I)</div>
+    <div class="box c10" data-audio="GAME/COMIC NOISE 1.mp3" data-key="O">COMIC NOISE 1(O)</div>
+    <div class="box c9" data-audio="GAME/COMIC NOISE 2.mp3" data-key="P">COMIC NOISE 2(P)</div>
+    <div class="box c8" data-audio="GAME/COMIC NOISE 3.mp3" data-key="[">COMIC NOISE 3([)</div>
+    <div class="box c7" data-audio="GAME/COMIC NOISE 4.mp3" data-key="]">COMIC NOISE 4(])</div>
+    <div class="box c2" data-audio="GAME/COMIC NOISE 5.mp3" data-key="A">COMIC NOISE 5(A)</div>
+    <div class="box c4" data-audio="GAME/COMIC NOISE 6.mp3" data-key="S">COMIC NOISE 6(S)</div>
+    <div class="box c6" data-audio="GAME/CYMBAL CRASH.mp3" data-key="D">CYMBAL CRASH(D)</div>
+    <div class="box c8" data-audio="GAME/DRUM ROLL (1 MINUTE).mp3" data-key="F">DRUM ROLL (1 MINUTE)(F)</div>
+    <div class="box c10" data-audio="GAME/DRUM ROLL (WITH CRASH).mp3" data-key="G">DRUM ROLL (WITH CRASH)(G)</div>
+    <div class="box c12" data-audio="GAME/DRUM ROLL [SLOW TO FAST] (WITH GONG).mp3" data-key="H">DRUM ROLL [SLOW TO FAST] (WITH GONG)(H)</div>
+    <div class="box c1" data-audio="GAME/HIT 1.mp3" data-key="J">HIT 1(J)</div>
+    <div class="box c3" data-audio="GAME/HIT 2.mp3" data-key="K">HIT 2(K)</div>
+    <div class="box c5" data-audio="GAME/HIT 3.mp3" data-key="L">HIT 3(L)</div>
+    <div class="box c7" data-audio="GAME/HIT 4.mp3" data-key=";">HIT 4(;)</div>
+    <div class="box c9" data-audio="GAME/HIT 5.mp3" data-key="Z">HIT 5(Z)</div>
+    <div class="box c11" data-audio="GAME/HIT 6.mp3" data-key="X">HIT 6(X)</div>
+    <div class="box c1" data-audio="GAME/HIT 7.mp3" data-key="C">HIT 7(C)</div>
+    <div class="box c12" data-audio="GAME/HIT 8.mp3" data-key="V">HIT 8(V)</div>
+    <div class="box c2" data-audio="GAME/HORN 3 (LONG).mp3" data-key="B">HORN 3 (LONG)(B)</div>
+    <div class="box c11" data-audio="GAME/HORN 4 (SHORT).mp3" data-key="N">HORN 4 (SHORT)(N)</div>
+    <div class="box c3" data-audio="GAME/HORN 5 (RACE).mp3" data-key="M">HORN 5 (RACE)(M)</div>
+    <div class="box c10" data-audio="GAME/LAUGH 9 (CHIPMUNK).mp3" data-key="q">LAUGH 9 (CHIPMUNK)(q)</div>
+    <div class="box c4" data-audio="GAME/LAUGH 10 (WAHAHAHA).mp3" data-key="w">LAUGH 10 (WAHAHAHA)(w)</div>
+    <div class="box c9" data-audio="GAME/LAUGH 11 (HAHAHA).mp3" data-key="e">LAUGH 11 (HAHAHA)(e)</div>
+    <div class="box c5" data-audio="GAME/LAUGH 12 (GIRL).mp3" data-key="r">LAUGH 12 (GIRL)(r)</div>
+    <div class="box c8" data-audio="GAME/LAUGH 13 (EPIC CROWD).mp3" data-key="t">LAUGH 13 (EPIC CROWD)(t)</div>
+    <div class="box c6" data-audio="GAME/PCSO (FX).wav" data-key="y">PCSO (FX)(y)</div>
+    <div class="box c7" data-audio="GAME/RUNNING (FX) + COMIC NOISE.mp3" data-key="u">RUNNING (FX) + COMIC NOISE(u)</div>
+    <div class="box c1" data-audio="GAME/RUNNING (FX).mp3" data-key="i">RUNNING (FX)(i)</div>
+    <div class="box c7" data-audio="GAME/SUSPENSE 1.mp3" data-key="o">SUSPENSE 1(o)</div>
+    <div class="box c2" data-audio="GAME/SUSPENSE 2.mp3" data-key="p">SUSPENSE 2(p)</div>
+    <div class="box c8" data-audio="GAME/TOINK 1 (5X).mp3" data-key="a">TOINK 1 (5X)(a)</div>
+    <div class="box c3" data-audio="GAME/TOINK 1.mp3" data-key="s">TOINK 1(s)</div>
+    <div class="box c9" data-audio="GAME/TOINK 2.mp3" data-key="d">TOINK 2(d)</div>
+    <div class="box c4" data-audio="GAME/TOINK 3.mp3" data-key="f">TOINK 3(f)</div>
+    <div class="box c10" data-audio="GAME/TOINK 4.mp3" data-key="g">TOINK 4(g)</div>
+    <div class="box c5" data-audio="GAME/TOINK 5.mp3" data-key="h">TOINK 5(h)</div>
+    <div class="box c11" data-audio="GAME/TOINK 6.mp3" data-key="j">TOINK 6(j)</div>
+    <div class="box c6" data-audio="GAME/TOINK 7.mp3" data-key="k">TOINK 7(k)</div>
+    <div class="box c12" data-audio="GAME/TOINK 8.mp3" data-key="l">TOINK 8(l)</div>
+    <div class="box c6" data-audio="GAME/WHIP 1 (1X).mp3" data-key="z">WHIP 1 (1X)(z)</div>
+    <div class="box c5" data-audio="GAME/WHIP 1 (4X).mp3" data-key="x">WHIP 1 (4X)(x)</div>
+    <div class="box c4" data-audio="GAME/WHIP 2.mp3" data-key="c">WHIP 2(c)</div>
+  </div>
+
+  <div class="controls">
+    <label for="volume">Volume:</label>
+    <input type="range" id="volume" class="volume-slider" min="0" max="1" step="0.01" value="1">
+  </div>
+
+  <script>
+    let currentAudio = null;
+    let currentBox   = null;
+    const volumeSlider = document.getElementById('volume');
+
+    function playPauseBox() {
+      const box      = this;
+      const fileName = box.dataset.audio;
+      if (!fileName) return;
+
+      // same-box toggle
+      if (currentBox === box) {
+        if (currentAudio.paused) {
+          currentAudio.play();
+          box.classList.add('playing');
+        } else {
+          currentAudio.pause();
+          box.classList.remove('playing');
+        }
+        return;
+      }
+
+      // switching to a new box
+      if (currentAudio) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+        currentBox.classList.remove('playing');
+      }
+
+      currentAudio        = new Audio(`sounds/${fileName}`);
+      currentAudio.loop   = false;
+      currentAudio.volume = volumeSlider.value;
+      currentAudio.play();
+
+      currentBox = box;
+      box.classList.add('playing');
+    }
+    function toggleMenu() {
+      const nav = document.getElementById('navMenu');
+      nav.classList.toggle('show');
+    };
+
+    // attach click handlers
+    document.querySelectorAll('.box').forEach(box =>
+      box.addEventListener('click', playPauseBox)
+    );
+
+    // keyboard shortcuts
+    window.addEventListener('keydown', e => {
+      // ignore modifiers & repeats
+      if (e.altKey || e.ctrlKey || e.metaKey || e.repeat) return;
+
+      const box = document.querySelector(`.box[data-key="${e.key}"]`);
+      if (!box) return;
+
+      e.preventDefault();
+      box.click();
+    });
+
+    // volume control
+    volumeSlider.addEventListener('input', e => {
+      if (currentAudio) currentAudio.volume = e.target.value;
+    });
+
+
+  </script>
+
+</body>
+</html>

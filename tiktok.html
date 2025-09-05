@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DJ AUDIO PARTY</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    /* Sticky Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: linear-gradient(to right, #4b6cb7, #182848);
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo img {
+      height: 50px;
+      width: 50px;
+    }
+
+    .logo h1 {
+      font-size: 1.5em;
+      margin: 0;
+      letter-spacing: 1px;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.5em;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .button {
+      background-color: white;
+      color: #182848;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #f0f0f0;
+    }
+
+    main {
+      padding-top: 100px; /* Adjust based on header height */
+    }
+
+
+    h2 {
+      text-align: center;
+      margin: 40px 0 20px;
+    }
+
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      justify-content: center;
+      padding: 0 20px;
+    }
+
+    .box {
+      flex: 1 1 150px;
+      padding: 20px;
+      text-align: center;
+      font-weight: bold;
+      border: 2px solid black;
+      cursor: pointer;
+      color: black;
+      border-radius: 8px;
+      user-select: none;
+    }
+
+    .c1  { background-color: #e74c3c; }
+    .c2  { background-color: #2ecc71; }
+    .c3  { background-color: #3498db; }
+    .c4  { background-color: #7FFF00; }
+    .c5  { background-color: #6495ED; }
+    .c6  { background-color: #FFEBCD; }
+    .c7  { background-color: #F0FFFF; }
+    .c8  { background-color: #FAEBD7; }
+    .c9  { background-color: #DC143C; }
+    .c10 { background-color: #00FFFF; }
+    .c11 { background-color: #BDB76B; }
+    .c12 { background-color: #FFD700; }
+    .c13 { background-color: #FFFF00; }
+    .c14 { background-color: #00FF00; }
+    .c15 { background-color: #FF00FF; }
+    .c16 { background-color: #FFC0CB; }
+    .c17 { background-color: #00FFFF; }
+    .c18 { background-color: #C0C0C0; }
+    .c19 { background-color: #FFA500; }
+    .c20 { background-color: #7FFFD4; }
+    .c21 { background-color: #98AFC7; }
+    .c22 { background-color: #728FCE; }
+    .c23 { background-color: #1569C7; }
+    .c24 { background-color: #14A3C7; }
+    .c25 { background-color: #3BB9FF; }
+    .c26 { background-color: #E0FFFF; }
+    .c27 { background-color: #01F9C6; }
+    .c28 { background-color: #43BFC7; }
+    .c29 { background-color: #00A36C; }
+    .c30 { background-color: #22CE83; }
+    .c31 { background-color: #08A04B; }
+
+
+    .playing {
+      box-shadow: 0 0 20px #000;
+    }
+
+    .controls {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .volume-slider {
+      width: 400px;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+      }
+
+      nav.show {
+        display: flex;
+      }
+
+      .button {
+        width: 100%;
+        margin-top: 5px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Logo">
+      <h1>DJ Audio Party</h1>
+    </div>	
+    <a href="tiktok.html" class="button">TikTok</a>
+    <a href="win.html" class="button">Winner Music</a>	
+    <a href="fx.html" class="button">Sound FX</a>
+    <a href="ins.html" class="button">Instrumental</a>
+    <a href="game.html" class="button">Game FX</a>
+    <a href="drop.html" class="button">Music Drop</a>
+    <a href="birth.html" class="button">Birthday Music</a>
+    <a href="pageant.html" class="button">Pageant Music</a>
+    <a href="pray.html" class="button">Prayer Music</a>
+    <a href="drum.html" class="button">Drum</a>
+    <a href="videos/The Philippine National Anthem with lyrics (HD)(360P).mp4" class="button" target="_blank">The Philippine National Anthem</a>
+
+	
+  </header>
+
+  <h2>Welcome to TIKTOK DROP SOUNDS</h2>
+
+  <div class="flex-container">
+    <div class="box c1"  data-audio="TIKTOK/drop1.mp3"  data-key="1">YOU’RE PERFECT (1)</div>
+    <div class="box c2"  data-audio="TIKTOK/drop2.mp3"  data-key="2">Shake it to the max (2)</div>
+    <div class="box c3"  data-audio="TIKTOK/drop3.mp3"  data-key="3">Wow Wow Wow (3)</div>
+    <div class="box c4"  data-audio="TIKTOK/drop4.mp3"  data-key="4">Ice cream good (4)</div>
+    <div class="box c5"  data-audio="TIKTOK/drop5.mp3"  data-key="5">Bonde do Brunao (5)</div>
+    <div class="box c6"  data-audio="TIKTOK/drop6.mp3"  data-key="6">Bunny Girl (6)</div>
+    <div class="box c7"  data-audio="TIKTOK/drop7.mp3"  data-key="7">Drop it Like It's Hot (7)</div>
+    <div class="box c8"  data-audio="TIKTOK/drop8.mp3"  data-key="8">Keep Up (8)</div>
+    <div class="box c9"  data-audio="TIKTOK/drop9.mp3"  data-key="9">Bumble Bee (9)</div>
+    <div class="box c10" data-audio="TIKTOK/drop10.mp3" data-key="0">Soda Pop (0)</div>
+    <div class="box c11" data-audio="TIKTOK/drop11.mp3" data-key="-">Golden (-)</div>
+    <div class="box c12" data-audio="TIKTOK/drop12.mp3" data-key="=">Who Makes Your Life Better (=)</div>
+    <div class="box c1" data-audio="TIKTOK/drop13.mp3" data-key="Q">Golden2 (Q)</div>
+    <div class="box c2" data-audio="TIKTOK/drop14.mp3" data-key="W">Rat Dance (W)</div>
+    <div class="box c3" data-audio="TIKTOK/drop15.mp3" data-key="E">Couple Dance (E)</div>
+    <div class="box c4" data-audio="TIKTOK/drop16.mp3" data-key="R">LEARN THE DANCE WITH US! (R)</div>
+    <div class="box c5" data-audio="TIKTOK/drop17.mp3" data-key="T">Pranked (T)</div>
+    <div class="box c6" data-audio="TIKTOK/drop18.mp3" data-key="Y">Los Voltaje (Y)</div>
+    <div class="box c12" data-audio="TIKTOK/drop19.mp3" data-key="U">Sheesh! (U)</div>
+    <div class="box c11" data-audio="TIKTOK/drop20.mp3" data-key="I">Eenie Meenie (I)</div>
+    <div class="box c10" data-audio="TIKTOK/drop21.mp3" data-key="O">Anxiety (O)</div>
+    <div class="box c9" data-audio="TIKTOK/drop22.mp3" data-key="P">La La La (P)</div>
+    <div class="box c8" data-audio="TIKTOK/drop23.mp3" data-key="[">Moves Like Jagger ([)</div>
+    <div class="box c7" data-audio="TIKTOK/drop24.mp3" data-key="]">Really Don't Care (])</div>
+    <div class="box c2" data-audio="TIKTOK/drop25.mp3" data-key="A">Taka Taka (A)</div>
+    <div class="box c4" data-audio="TIKTOK/drop26.mp3" data-key="S">Cheap Trills (S)</div>
+    <div class="box c6" data-audio="TIKTOK/drop27.mp3" data-key="D">Nani Katseye (D)</div>
+    <div class="box c8" data-audio="TIKTOK/drop28.mp3" data-key="F">Stop! Ice Ice Baby (F)</div>
+    <div class="box c10" data-audio="TIKTOK/drop29.mp3" data-key="G">Scars To Your Beatiful (G)</div>
+    <div class="box c12" data-audio="TIKTOK/drop30.mp3" data-key="H">Trakata (H)</div>
+    <div class="box c1" data-audio="TIKTOK/drop31.mp3" data-key="J">To (J)</div>
+    <div class="box c3" data-audio="TIKTOK/drop32.mp3" data-key="K">Fire Burning (K)</div>
+    <div class="box c5" data-audio="TIKTOK/drop33.mp3" data-key="L">Old Town Road (L)</div>
+    <div class="box c7" data-audio="TIKTOK/drop34.mp3" data-key=";">Nothings Beat A Holiday (;)</div>
+    <div class="box c9" data-audio="TIKTOK/drop35.mp3" data-key="Z">Vidrado (Z)</div>
+    <div class="box c11" data-audio="TIKTOK/drop36.mp3" data-key="X">Chicken Banana (X)</div>
+    <div class="box c12" data-audio="TIKTOK/drop38.mp3" data-key="C">SONIDO(C)</div>
+    <div class="box c13" data-audio="TIKTOK/drop39.mp3" data-key="V">stefanygusmao(V)</div>
+    <div class="box c14" data-audio="TIKTOK/drop40.mp3" data-key="B">Hot Issue(B)</div>
+    <div class="box c15" data-audio="TIKTOK/drop41.mp3" data-key="N">ez.song(N)</div>
+    <div class="box c16" data-audio="TIKTOK/drop42.mp3" data-key="M">Milkshake(M)</div>
+    <div class="box c17" data-audio="TIKTOK/drop43.mp3" data-key="q">Scarletnsofia(q)</div>
+    <div class="box c18" data-audio="TIKTOK/drop44.mp3" data-key="w">ROCK UR BODY(w)</div>
+    <div class="box c19" data-audio="TIKTOK/drop45.mp3" data-key="e">Sapphire(e)</div>
+    <div class="box c20" data-audio="TIKTOK/drop46.mp3" data-key="r">RETRO DISCO MIX(r)</div>
+    <div class="box c21" data-audio="TIKTOK/drop47.mp3" data-key="t">Gabriela(t)</div>
+    <div class="box c22" data-audio="TIKTOK/drop48.mp3" data-key="y">Killin' It Girl (Outro)(y)</div>
+    <div class="box c23" data-audio="TIKTOK/drop49.mp3" data-key="u">Skrrrrtt pull up(u)</div>
+    <div class="box c24" data-audio="TIKTOK/drop50.mp3" data-key="i">ashtineolviga(i)</div>
+    <div class="box c24" data-audio="TIKTOK/drop51.mp3" data-key="o">DAYANG2(o)</div>
+    <div class="box c24" data-audio="TIKTOK/drop52.mp3" data-key="p">Who's That Girl(p)</div>
+    <div class="box c24" data-audio="TIKTOK/drop53.mp3" data-key="a">Alta(a)</div>
+    <div class="box c24" data-audio="TIKTOK/drop54.mp3" data-key="s">kimmiiz(s)</div>
+  </div>
+
+  <div class="controls">
+    <label for="volume">Volume:</label>
+    <input type="range" id="volume" class="volume-slider" min="0" max="1" step="0.01" value="1">
+  </div>
+
+  <script>
+    let currentAudio = null;
+    let currentBox   = null;
+    const volumeSlider = document.getElementById('volume');
+
+    function playPauseBox() {
+      const box      = this;
+      const fileName = box.dataset.audio;
+      if (!fileName) return;
+
+      // same-box toggle
+      if (currentBox === box) {
+        if (currentAudio.paused) {
+          currentAudio.play();
+          box.classList.add('playing');
+        } else {
+          currentAudio.pause();
+          box.classList.remove('playing');
+        }
+        return;
+      }
+
+      // switching to a new box
+      if (currentAudio) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+        currentBox.classList.remove('playing');
+      }
+
+      currentAudio        = new Audio(`sounds/${fileName}`);
+      currentAudio.loop   = true;
+      currentAudio.volume = volumeSlider.value;
+      currentAudio.play();
+
+      currentBox = box;
+      box.classList.add('playing');
+    }
+    function toggleMenu() {
+      const nav = document.getElementById('navMenu');
+      nav.classList.toggle('show');
+    };
+
+    // attach click handlers
+    document.querySelectorAll('.box').forEach(box =>
+      box.addEventListener('click', playPauseBox)
+    );
+
+    // keyboard shortcuts
+    window.addEventListener('keydown', e => {
+      // ignore modifiers & repeats
+      if (e.altKey || e.ctrlKey || e.metaKey || e.repeat) return;
+
+      const box = document.querySelector(`.box[data-key="${e.key}"]`);
+      if (!box) return;
+
+      e.preventDefault();
+      box.click();
+    });
+
+    // volume control
+    volumeSlider.addEventListener('input', e => {
+      if (currentAudio) currentAudio.volume = e.target.value;
+    });
+
+
+  </script>
+
+</body>
+</html>
